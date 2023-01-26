@@ -25,7 +25,7 @@ const LoginForm = () => {
 
     useEffect (() => {
         if (user !== null){
-            navigate('/Profile')
+            navigate('/Translations')
         }
         console.log('User has changed', user)
     }, [user, navigate])
@@ -63,18 +63,19 @@ const LoginForm = () => {
     //in return, shandleSubmit will capture all data from form and forward it to onSubmit
     return(
         <>
-        <h2>What's your name?</h2>
         <form onSubmit={ handleSubmit(onSubmit) }> 
             <fieldset>
-                <label htmlFor="userName">Username</label>
+                <label htmlFor="userName"></label>
                 <input 
                 type="text"
-                placeholder="johndoe"
+                placeholder="What's your name?"
+                style={{padding: 20, borderRadius: 20, marginTop: 30, marginBottom: 20}}
                 {...register("username", usernameConfig)} /> 
                 { errorMessage } 
 
             </fieldset>
-            <button type="submit" disabled={loading}>Continue</button>
+            <button type="submit" disabled={loading} 
+            style={{ backgroundColor:'transparent', border: 'none', fontFamily:'Ink Free', fontWeight: 'bold', fontSize: 'xx-large', padding: 20}}>Log in!</button>
 
             {loading && <p>Logging in...</p>}
             { apiError && <p>{apiError}</p>}

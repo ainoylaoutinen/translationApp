@@ -9,10 +9,26 @@ const ProfileHistory = ({translations}) => {
 
     return (
         <section>
-            <h4>Your past translations</h4>
-            <ul>
+        <h2 style={{
+        fontFamily:'Ink Free',
+        alignItems: "center",
+        color: "white",
+        justifyContent: "center",
+        letterSpacing: 4,
+        marginLeft: 400,
+        marginRight: 400,
+        padding: 20,
+        borderRadius: 20}}>Your past translations:</h2>
+
+            <p style={{color: "black", 
+            fontFamily:'Ink Free',
+            fontSize: 20,
+            fontWeight: 'bold',
+            backgroundColor: 'goldenrod',
+            marginLeft: 400,
+            marginRight: 400}}>
                 {translationList}
-            </ul>
+            </p>
         
         </section>
         )

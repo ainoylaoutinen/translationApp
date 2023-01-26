@@ -1,30 +1,27 @@
-import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 
-const Navbar = () => {
+const NavBar = () => {
 
     const { user} = useUser()
     //if user is not logged in, do not display translations and profile page
     return (
-        <nav>
-            <ul>
-                <li>Translations App</li>
-            </ul>
-
-            { user !== null &&
-
-            <ul> 
-                <li>
-                    <NavLink to="/translations">Translations</NavLink> 
-                </li>
-                <li>
-                    <NavLink to="/profile">Profile</NavLink>
-                </li>
-            </ul>
-            }
-
-        </nav>
+        <>
+        <Navbar bg="light" variant="light">
+        <Container>
+        <Navbar.Brand href="/">Lost in Translation</Navbar.Brand>
+        { user !== null &&
+          <Nav className="me-auto">
+            <Nav.Link href="/translations">Translate</Nav.Link>
+            <Nav.Link href="/profile">Profile</Nav.Link>
+          </Nav>
+        }
+        </Container>
+        </Navbar>
+        </>
     )
 }
 
-export default Navbar
+export default NavBar
