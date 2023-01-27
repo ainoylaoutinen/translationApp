@@ -27,13 +27,12 @@ const Profile = () => {
     return (
         <>
         <div style={{ 
-            backgroundImage: "url(/img/backgreound3.png)", height: 553, 
+            backgroundImage: "url(/img/backgreound3.png)", height: 900, 
          }}>
         <h1 style={{
         fontSize: 50,
         color: "white",
         fontFamily:'Ink Free',
-        fontWeight: 'bold',
         alignItems: "center",
         justifyContent: "center",
         letterSpacing: 4,
@@ -42,7 +41,7 @@ const Profile = () => {
         padding: 20,
         borderRadius: 20}}>{user.username}'s Profile</h1>
         <ProfileActions/>
-        <ProfileHistory translations={user.translations}/>
+        <ProfileHistory translations={user.translations}/> 
         </div>
         </>
 

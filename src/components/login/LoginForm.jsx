@@ -6,8 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import { STORAGE_KEY_USER } from "../../const/StorageKeys"
 
-
-const usernameConfig = { //if the component re-renders, it wont re-create objects
+const usernameConfig = { 
     required: true, //username should be required
     minLength: 2 //username should be more than 2 char
 } 
@@ -19,7 +18,7 @@ const LoginForm = () => {
     //2.with the register function 2.executes onSubmit 3. passes result to data
     const {user, setUser} = useUser()
     const navigate = useNavigate()
-    //Local states
+
     const [loading, setLoading] = useState(false);
     const [apiError, setApiError] = useState(null);
 
@@ -59,8 +58,6 @@ const LoginForm = () => {
         }
     })()
 
-
-    //in return, shandleSubmit will capture all data from form and forward it to onSubmit
     return(
         <>
         <form onSubmit={ handleSubmit(onSubmit) }> 

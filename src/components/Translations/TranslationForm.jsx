@@ -11,11 +11,13 @@ const TranslationForm = ({onEvent}) => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
-                <label htmlFor="wanted-translation">wanted translation</label>
+                <label htmlFor="wanted-translation" style={{fontFamily:'Ink Free',
+        alignItems: "center", color: "white", fontSize: 30}}>wanted translation:</label>
                 <input type="text" {...register('wantedTranslation')}/>
             </fieldset>
 
-            <button type="submit">Translate</button>
+            <button type="submit" 
+             style={{ backgroundColor: 'transparent', border: 'none', fontFamily:'Rockwell', fontSize: 'x-large', padding: 20, marginRight: 20}}>Translate</button>
 
         </form>
     )

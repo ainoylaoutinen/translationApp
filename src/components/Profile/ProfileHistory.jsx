@@ -5,7 +5,6 @@ const ProfileHistory = ({translations}) => {
     const translationList = translations.map(
         (translation, index) => <ProfileHistoryItem key={index + '-' + translation} translation={translation}/>)
         //maps past translations to the profile page
-        //index allows duplicate translations
 
     return (
         <section>

@@ -30,16 +30,16 @@ const ProfileActions = () => {
         ...user,
         translations: []
     }
-    storageSave(updatedUser)
+    storageSave(STORAGE_KEY_USER, updatedUser)
     setUser(updatedUser)
 }
 
     return (
         <section>
         <button onClick={handleClearHistory}
-        style={{ backgroundColor: 'goldenrod', fontFamily:'Arial', fontSize: 'small', padding: 20, marginRight: 20}}>Clear History</button>
+        style={{ backgroundColor: 'transparent', border: 'none', fontFamily:'Rockwell', fontSize: 'x-large', padding: 20, marginRight: 20}}>Clear History</button>
         <button onClick={handleLogOut}  
-        style={{ backgroundColor:'goldenrod', fontFamily:'Arial', fontSize: 'small', padding: 20}}>Log Out</button>
+        style={{ backgroundColor: 'transparent', border: 'none', fontFamily:'Rockwell', fontSize: 'x-large', padding: 20}}>Log Out</button>
         </section>
     )
 }

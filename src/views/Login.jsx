@@ -1,4 +1,3 @@
-import { buildQueries } from "@testing-library/react";
 import LoginForm from "../components/login/LoginForm";
 
 
@@ -19,7 +18,7 @@ const Login = () => {
     return (
         <>
         <div style={{ 
-            backgroundImage: "url(/img/backgreound3.png)", height: 553, 
+            backgroundImage: "url(/img/backgreound3.png)", height: 900, 
          }}>
         <section style={headingStyle}>
         <h1>Lost in Translation</h1>
